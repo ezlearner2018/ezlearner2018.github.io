@@ -9,11 +9,11 @@
 
 ## Built With
 
-Bot Development
+Bot Development: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Bot Icon")
 - [Node.js](https://nodejs.org/en/)
 - [Sublime Text Editor](https://www.sublimetext.com/)
 
-Website Development
+Website Development:
 - HTML editor
 
 ## Contributing
