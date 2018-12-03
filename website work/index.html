@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+</script>
+<script src="QuizEval.js"></script>
+
+<head>
+  <title>Learninglinks</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="eduv1.css">
+</head>
+
+<body>
+<header>
+  <h2>Learning Style Quiz</h2>
+</header>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <hr>
+      <li><a href="#">ABOUT</a></li>
+      <hr>
+      <li><a href="#">REQUEST COURSE</a></li>
+      <hr>
+      <li><a href="#">Take Quiz</a></li>
+      <hr>
+    </ul>
+  </nav>
+
+  <article>
+    <h1>Learning Style Quiz</h1>
+    <p>
+        <!--
+            =V which is visual learner
+            =A which is 
+            =VR
+            =K
+        -->
+    <form>
+      <div class="transbox4">
+          <p4>1. You have a problem with your heart. You would prefer that the doctor:</p4><br>
+          <input type ="radio" id="mc1a" name="question1" value="V"> Used a plastic model to show what was wrong. <br>
+          <input type ="radio" id="mc1b" name="question1" value="A"> Described what was wrong.<br>
+          <input type ="radio" id="mc1c" name="question1" value="VR"> Gave you something to read to explain what was wrong<br>
+          <input type ="radio" id="mc1d" name="question1" value="K"> Showed you a diagram of what was wrong.<br>
+      </div>
+      <br>
+      <div class="transbox4">
+          <p4>2. A group of tourists wants to learn about the parks or wildlife reserves in your area. You would:</p4><br>
+          <input type ="radio" id="mc2a" name="question2" value="K"> Take them to a park or wildlife reserve and walk with them.<br>
+          <input type ="radio" id="mc2b" name="question2" value="A"> Talk about, or arrange a talk for them about parks or wildlife reserves.<br>
+          <input type ="radio" id="mc2c" name="question2" value="V"> Show them maps and internet pictures.<br>
+          <input type ="radio" id="mc2d" name="question2" value="VR"> Give them a book or pamphlets about the parks or wildlife reserves.<br>
+      </div>
+      <br>
+      <!--Money radio buttons-->
+      <div class="transbox4">
+          <p4>3. You want to learn a new program, skill or game on a computer. You would:</p4><br>
+          <input type ="radio" id="mc3a" name="question3" value="V"> Follow the diagrams in the book that came with it.<br>
+          <input type ="radio" id="mc3b" name="question3" value="A"> Talk with people who know about the program.<br>
+          <input type ="radio" id="mc3c" name="question3" value="K"> Use the controls or keyboard.<br>
+          <input type ="radio" id="mc3d" name="question3" value="VR"> Read the written instructions that came with the program.<br>
+      </div>
+      <br>
+      <div class="transbox4">
+          <p4>4. Other than price, what would most influence your decision to buy a new non-fiction book?</p4><br>
+          <input type ="radio" id="mc4a" name="question4" value="K"> It has real-life stories, experiences and examples.<br>
+          <input type ="radio" id="mc4b" name="question4" value="VR"> Quickly reading parts of it.<br>
+          <input type ="radio" id="mc4c" name="question4" value="A">A friend talks about it and recommends it.<br>
+          <input type ="radio" id="mc4d" name="question4" value="V"> The way it looks is appealing.<br>
+          <br>
+      </div>
+      <br>
+      <div class="transbox4">
+          <p4>5. You are learning how to take photos with your new digital camera. You would like to have:</p4><br>
+          <input type ="radio" id="mc5a" name="question5" value="V"> Diagrams showing the camera and what each part does.<br>
+          <input type ="radio" id="mc5b" name="question5" value="VR"> Clear written instructions with lists and bullet points about what to do.<br>
+          <input type ="radio" id="mc5c" name="question5" value="K"> Many examples of good and poor photos and how to improve them.<br>
+          <input type ="radio" id="mc5d" name="question5" value="A"> Someone to ask questions and talk about the camera and its features.<br>
+          <br>
+      </div>
+      <br>
+      <div class="transbox4">
+          <p4>6. You are helping someone who wants to go to the airport, the center of town or railway station. You would:</p4><br>
+          <input type ="radio" id="mc6a" name="question6" value="A"> Tell him the directions. <br>
+          <input type ="radio" id="mc6b" name="question6" value="VR"> Write down the directions. <br>
+          <input type ="radio" id="mc6c" name="question6" value="K"> Go with him.<br>
+          <input type ="radio" id="mc6d" name="question6" value="V"> Draw, or show her a map, or give her a map.<br>
+          <br>
+      </div>
+      <div class="transbox4">
+          <p4>7. You are going to cook something as a special treat. You would:</p4><br>
+          <input type ="radio" id="mc7a" name="question7" value="V"> Look on the Internet or in some cookbooks for ideas from the pictures or videos.<br>
+          <input type ="radio" id="mc7b" name="question7" value="A"> Ask friends for suggestions.<br>
+          <input type ="radio" id="mc7c" name="question7" value="VR"> Use a cookbook where you know there is a good recipe.<br>
+          <input type ="radio" id="mc7d" name="question7" value="K"> Cook something you know without the need for instructions.<br>
+          <br>
+      </div>
+      <br>
+      <div class="transbox4">
+          <p4>8. You are planning a vacation for a group. You want some feedback from them about the plan, You would:</p4><br>
+          <input type ="radio" id="mc8a" name="question8" value="A"> Describe some of the highlights they will experience. <br>
+          <input type ="radio" id="mc8b" name="question8" value="V"> Use a map to show them the places.<br>
+          <input type ="radio" id="mc8c" name="question8" value="VR"> Give them a copy of the printed itinerary. <br>
+          <input type ="radio" id="mc8d" name="question8" value="K"> Phone, text or email them.<br>
+          <br>
+      </div>
+      <br>
+      <div class="transbox4">
+        <p4>9. You have finished a competition or test and would like some feedback. You would like to have feedback:</p4><br>
+        <input type ="radio" id="mc9a" name="question9" value="A"> From somebody who talks it through with you.  <br>
+        <input type ="radio" id="mc9b" name="question9" value="V"> Using graphs showing what you had achieved.<br>
+        <input type ="radio" id="mc9c" name="question9" value="VR"> Using a written description of your results.  <br>
+        <input type ="radio" id="mc9d" name="question9" value="K"> Using examples from what you have done. <br>
+        <br>
+      </div>
+      <br>
+      <div class="transbox4">
+        <p4>10. A website has a video showing how to make a special graph. There is a person speaking, some lists and words describing what to do and some diagrams. You would learn most from:</p4>
+        <br>
+        <input type ="radio" id="mc10a" name="question10" value="A"> Listening.  <br>
+        <input type ="radio" id="mc10b" name="question10" value="VR"> Reading the words. <br>
+        <input type ="radio" id="mc10c" name="question10" value="V"> Watching the diagrams.  <br>
+        <input type ="radio" id="mc10d" name="question10" value="K"> Watching the actions. <br>
+        <br>
+      </div>
+      <br>
+      <div class="transbox4">
+        <p4>11. Do you prefer a teacher or a presenter who uses:</p4>
+        <br>
+        <input type ="radio" id="mc11a" name="question11" value="A"> question and answer, talk, group discussion, or guest speakers.  <br>
+        <input type ="radio" id="mc11b" name="question11" value="K"> demonstrations, models or practical sessions. <br>
+        <input type ="radio" id="mc11c" name="question11" value="VR"> handouts, books, or readings.  <br>
+        <input type ="radio" id="mc11d" name="question11" value="V"> diagrams, charts or graphs. <br>
+        <br>
+      </div>
+      <br>
+     <div class="transbox4">
+        <p4>12. I like websites that have:</p4>
+        <br>
+        <input type ="radio" id="mc12a" name="question12" value="VR"> interesting written descriptions, lists and explanations. <br>
+        <input type ="radio" id="mc12b" name="question12" value="A"> audio channels where I can hear music, radio programs or interviews.  <br>
+        <input type ="radio" id="mc12c" name="question12" value="K"> things I can click on, shift or try. <br>
+        <input type ="radio" id="mc12d" name="question12" value="V"> interesting design and visual features.  <br>
+        <br>
+      </div>
+      <br>
+      <div class="transbox4">
+        <p4>13. Remember a time when you learned how to do something new. Avoid choosing a physical skill, eg. riding a bike. You learned best by:</p4>
+        <br>
+        <input type ="radio" id="mc13a" name="question13" value="VR"> written instructions – e.g. a manual or book.   <br>
+        <input type ="radio" id="mc13b" name="question13" value="A"> listening to somebody explaining it and asking questions. <br>
+        <input type ="radio" id="mc13c" name="question13" value="V"> diagrams, maps, and charts - visual clues. <br>
+        <input type ="radio" id="mc13d" name="question13" value="K"> watching a demonstration.  <br>
+        <br>
+      </div>
+      </p>
+    </form>
+
+    <!--This is left empty for the javascript to fill out-->
+    <div class="transbox"><p id="demo"></p></div></div>
+    <br>
+    <!--submission button that triggers the javascript-->
+    <div class = "buttons">
+            <center>
+                <input type="submit" id="submit" value="Submit">
+            </center>
+        </div>
+
+    <script type="text/javascript">
+        // document.ready function
+        $(function() {
+            // selector has to be . for a class name and # for an ID
+            $('#submit').click(function(e) {
+                gradeQuiz();
+            });
+        });
+    </script>
+  </article>
+ 
+</body>
+</html>

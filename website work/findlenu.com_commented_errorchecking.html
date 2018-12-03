@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--these are the supporting documentations and required documents for the website to operate-->
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbTII77u_ZMAe4KquJSa_KgY3gXcqNBHA&libraries=places&callback=initMap" async defer></script>
+        <title>
+            findlenu.com
+        </title>
+    </head>
+    <body>
+      <div class="transbox">
+        <center><img class="logo" src="shopped.png" height="145" width="349">
+        <br>
+        <p5><i>Find local eats near you </i></p5>
+        </center>
+      </div>
+      <div id="colorstrip"></div>
+      <div id="colorstrip2"></div>
+        <p>
+            <div class="transbox">
+                <center>
+                    <p6>
+                        <i>Welcome to lenu!</i>
+                        <br>
+                        Answer the four questions below to find somewhere to eat.
+                    </p6>
+                </center>
+            </div>
+        </p>
+        <form id = "userdata" name="userdata">
+            <div class="transbox4">
+                <p2>What city are you in?</p2><br>
+                <input type="text" id="address"><br>
+            </div>
+            <!--This is the the multiple choice question for type of food and contains a drop down menu to select multiple options
+            this contians values on the submit button for the radio buttons-->
+            <div class="transbox4">
+            <p3>What kind of food are you looking for?</p3><br>
+                <input type ="radio" id="mc1a" name="question2" value="Mexican"> Mexican<br>
+                <input type ="radio" id="mc1b" name="question2" value="Italian"> Italian<br>
+                <input type ="radio" id="mc1c" name="question2" value="Steakhouse"> Steakhouse<br>
+                <input type ="radio" id="mc1d" name="question2" value="Chinese Restaurant"> Chinese Restaurant<br>
+                <input type="radio" id="mc1e" name="question2" value="">
+
+                <!--Drop Down menu-->
+                <select id="mySelect">
+                  <!--first one is left blank to ensure that the program runs properly and if the user wants to cancel the drop down box.-->
+                  <option></option>
+                  <option value="4bf58dd8d48988d1ce941735">Seafood Restaurant</option>
+                  <option value="4bf58dd8d48988d1df931735">BBQ Joint</option>
+                  <option value="4bf58dd8d48988d116941735">Bar</option>
+                  <option value="4bf58dd8d48988d147941735">Diner</option>
+                  <option value="4bf58dd8d48988d1d0941735">Dessert Shop</option>
+                  <option value="4bf58dd8d48988d1e0931735">Coffee Shop</option>
+                  <option value="4bf58dd8d48988d111941735">Japanese Restaurant</option>
+                  <option value="4bf58dd8d48988d1be941735">Latin American Restaurant</option>
+                  <option value="4bf58dd8d48988d1c0941735">Mediterranean Restaurant</option>
+                  <option value="4bf58dd8d48988d115941735">Middle Eastern Restaurant</option>
+                  <option value="4deefc054765f83613cdba6f">Indonesian Restaurant</option>
+                </select><br>
+            </div>
+            <!--Money radio buttons-->
+            <div class="transbox4">
+                <p4>How much money are you willing to spend?</p4><br>
+                <input type ="radio" id="mc2a" name="question3" value="1"> $<br>
+                <input type ="radio" id="mc2b" name="question3" value="2"> $$<br>
+                <input type ="radio" id="mc2c" name="question3" value="3"> $$$<br>
+                <input type ="radio" id="mc2d" name="question3" value="4"> $$$$<br>
+            </div>
+            <!--Distance Radio buttons-->
+            <div class="transbox4">
+                <p4>How far are you willing to drive?</p4><br>
+                <input type ="radio" id="mc3a" name="question4" value="8046.72"> less than 5 miles<br>
+                <input type ="radio" id="mc3b" name="question4" value="16093.4"> 5 miles-10 miles<br>
+                <input type ="radio" id="mc3c" name="question4" value="24140.2"> 11 miles-15 miles<br>
+                <input type ="radio" id="mc3d" name="question4" value="32186.9"> 16 miles-20 miles<br>
+                <input type ="radio" id="mc3e" name="question4" value="48280.3"> more than 20 miles<br>
+                <br>
+            </div>
+            <!--submission button that triggers the javascript-->
+            <div class = "buttons">
+                <center>
+                    <input type="submit" id="submit" value="Submit">
+                </center>
+            </div>
+        </form>
+        <!--This is left empty for the javascript to fill out-->
+        <div class="transbox"><p id="demo"></p></div></div>
+        <!--Explains to user what foursquares database sends back-->
+        <div class="transbox"><center>* Undefined results means that the company did not submit that data to Foursquare.</center><br><center>If you would like to contact us or provide feedback, you can reach us here.</br> <a href="https://findlenu.wixsite.com/mysite">Contact Page</a></center></div>
+
+
+    <!--this is the begining of the google maps portion of the website-->
+    <input id="origin-input" class="controls" type="text"value="16301 Innovation Ln, Fort Myers, FL 33913">
+    <input id="destination-input" class="controls" type="text" placeholder="Enter a destination location">
+    <!--method of transportation for google maps api-->
+    <div id="mode-selector" class="controls">
+      <input type="radio" name="type" id="changemode-walking" checked="checked">
+      <label for="changemode-walking">Walking</label>
+
+      <input type="radio" name="type" id="changemode-transit">
+      <label for="changemode-transit">Transit</label>
+
+      <input type="radio" name="type" id="changemode-driving">
+      <label for="changemode-driving">Driving</label>
+    </div>
+    <!--Provides spacing for website to look properly-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   <center>Please enter in the address and click on the drop down menu.</center>
+   <!--Declares the google map-->
+   <div id="map"></div>
+
+
+    <script type="text/javascript">
+        // document.ready function
+        $(function() {
+            // selector has to be . for a class name and # for an ID
+            $('#submit').click(function(e) {
+            //checks the radio buttons
+            //varable to ensure that form is filled out properly w=words f=food m=money r=radius
+            var successW=0;
+            var successF=0;
+            var successM=0;
+            var successR=0;
+                if(document.getElementById("address")!=null){
+                    successW=1;
+                }
+                if (document.getElementById('mc1e').checked){
+                    var x = document.getElementById("mySelect").selectedIndex;
+                    if (x==0){
+
+                    }
+                    else if(x>0){
+                    var datadropdown = document.getElementById("mySelect").options;
+                    var typeFood = datadropdown[x].text;
+                    var wut = datadropdown[x].value;
+                    successF=1;
+                  }
+                }
+                else if(document.getElementById('mc1a').checked) {
+                    var typeFood = document.getElementById('mc1a').value;
+                    var wut = "4bf58dd8d48988d1c1941735";
+                    successF=1;
+                }
+                else if (document.getElementById('mc1b').checked) {
+                    var typeFood = document.getElementById('mc1b').value;
+                    var wut = "4bf58dd8d48988d110941735";
+                    successF=1;
+                }
+                else if (document.getElementById('mc1c').checked) {
+                    var typeFood = document.getElementById('mc1c').value;
+                    var wut = "4bf58dd8d48988d1cc941735";
+                    successF=1;
+                }
+                else if (document.getElementById('mc1d').checked) {
+                    var typeFood = document.getElementById('mc1d').value;
+                    var wut = "4bf58dd8d48988d145941735";
+                    successF=1;
+                }
+
+                //this is the money
+                if (document.getElementById('mc2a').checked) {
+                    var money = document.getElementById('mc2a').value;
+                    successM=1;
+                }
+                else if (document.getElementById('mc2b').checked) {
+                    var money = document.getElementById('mc2b').value;
+                    successM=1;
+                }
+                else if (document.getElementById('mc2c').checked) {
+                    var money = document.getElementById('mc2c').value;
+                    successM=1;
+                }
+                else if (document.getElementById('mc2d').checked) {
+                    var money = document.getElementById('mc2d').value;
+                    successM=1;
+                }
+                //this is the radius
+                if (document.getElementById('mc3a').checked) {
+                    var distanceM = document.getElementById('mc3a').value;
+                    successR=1;
+                }
+                else if (document.getElementById('mc3b').checked) {
+                    var distanceM = document.getElementById('mc3b').value;
+                    successR=1;
+                }
+                else if (document.getElementById('mc3c').checked) {
+                    var distanceM = document.getElementById('mc3c').value;
+                    successR=1;
+                }
+                else if (document.getElementById('mc3d').checked) {
+                    var distanceM = document.getElementById('mc3d').value;
+                    successR=1;
+                }
+                e.preventDefault(); // prevent form from reloading page
+                //alert("Getting Data");
+                var currentAddress= $("#address").val()
+                console.log("address-> " + currentAddress);
+                //this sends the request from forsquare with variables in the request to have dynamic entry
+                if(successF==1 && successM==1 && successR==1 && successW==1){
+                $.ajax({
+                    method: "GET",
+                    url: "https://api.foursquare.com/v2/venues/search",
+                    data: {
+                        v: "20161016",
+                        near: currentAddress,
+                        radius: distanceM,
+                        query:  typeFood,
+                        intent: "browse",
+                        limit: "50",
+                        categoryId: wut,
+                        openNow: "1",
+                        sortByDistance: "1",
+                        price: money,
+                        client_id: "NFKY20DCLANGNHCUAJDG5HHZB3ZH1JHIX5Q4S4QT31VF3VYJ",
+                        client_secret: "I2EVR3CA0GTRJXRZE5QYTXDFHEKSKOFDSODBGCH0OKWYZUHL",
+                    },
+                    //this is to start the parseJSON fucntion
+                    success: parseJSON
+                })}
+                else{
+                    alert("Please recheck your submissions");
+                }
+            });
+        });
+        //parses the JSON data returned from foursquare.
+        function parseJSON(data) {
+                var k = data.response.venues.length;
+                console.log(1);
+                for (var j = 0; j < k; j++) {
+                    var shops = data.response.venues[j].name;
+                    var T = confirm("Would you like to eat at "+shops+"!");
+                    if(T==true){
+                        console.log(123);
+                        txt= "Name: "+data.response.venues[j].name+"<br>"+
+                        "Phone: "+data.response.venues[j].contact.formattedPhone+"<br>"+
+                        "Address: "+data.response.venues[j].location.address+", "+data.response.venues[j].location.cc+", "+data.response.venues[j].location.city+", "+data.response.venues[j].location.country+".<br>"
+                        +"Website: "+data.response.venues[j].url+"<br>";
+                        break;
+                    }
+            }
+        //puts the parsed JSON into the html
+        document.getElementById("demo").innerHTML=txt;
+        }
+
+        </script>
+        <!--Google maps javascript-->
+        <script>
+            // This example requires the Places library. Include the libraries=places
+            // parameter when you first load the API. For example:
+            // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    mapTypeControl: false,
+                    center: {lat: 26.14234, lng: -81.79596},
+                    zoom: 13
+                });
+                new AutocompleteDirectionsHandler(map);
+                }
+                function AutocompleteDirectionsHandler(map) {
+                    this.map = map;
+                    this.originPlaceId = null;
+                    this.destinationPlaceId = null;
+                    this.travelMode = 'WALKING';
+                    var originInput = document.getElementById('origin-input');
+                    var destinationInput = document.getElementById('destination-input');
+                    var modeSelector = document.getElementById('mode-selector');
+                    this.directionsService = new google.maps.DirectionsService;
+                    this.directionsDisplay = new google.maps.DirectionsRenderer;
+                    this.directionsDisplay.setMap(map);
+
+                    var originAutocomplete = new google.maps.places.Autocomplete(
+                        originInput, {placeIdOnly: true});
+                    var destinationAutocomplete = new google.maps.places.Autocomplete(
+                        destinationInput, {placeIdOnly: true});
+
+                    this.setupClickListener('changemode-walking', 'WALKING');
+                    this.setupClickListener('changemode-transit', 'TRANSIT');
+                    this.setupClickListener('changemode-driving', 'DRIVING');
+
+                    this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
+                    this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
+
+                    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
+                    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
+                    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
+                }
+                // Sets a listener on a radio button to change the filter type on Places
+                // Autocomplete.
+                AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
+                    var radioButton = document.getElementById(id);
+                    var me = this;
+                    radioButton.addEventListener('click', function() {
+                    me.travelMode = mode;
+                    me.route();
+                  });
+                };
+                AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(autocomplete, mode) {
+                    var me = this;
+                    autocomplete.bindTo('bounds', this.map);
+                    autocomplete.addListener('place_changed', function() {
+                    var place = autocomplete.getPlace();
+                        if (!place.place_id) {
+                            window.alert("Please select an option from the dropdown list.");
+                            return;
+                        }
+                        if (mode === 'ORIG') {
+                            me.originPlaceId = place.place_id;
+                        }
+                        else {
+                            me.destinationPlaceId = place.place_id;
+                        }
+                        me.route();
+                        });
+                };
+                AutocompleteDirectionsHandler.prototype.route = function() {
+                    if (!this.originPlaceId || !this.destinationPlaceId) {
+                        return;
+                    }
+                    var me = this;
+                    this.directionsService.route({
+                        origin: {'placeId': this.originPlaceId},
+                        destination: {'placeId': this.destinationPlaceId},
+                        travelMode: this.travelMode
+                    },
+                    function(response, status) {
+                        if (status === 'OK') {
+                            me.directionsDisplay.setDirections(response);
+                        }
+                        else {
+                            window.alert('Directions request failed due to ' + status);
+                        }
+                    });
+                };
+              </script>
+              <!--style and copyright-->
+              <div id="colorstrip"></div>
+              <div id="colorstrip2"> <br><center>&copy; Copyright2018 by lenu services, LLC</center></div>
+    </body>
+</html>
