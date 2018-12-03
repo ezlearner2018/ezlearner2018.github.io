@@ -83,7 +83,7 @@ function compareTweets (){
 //respond to tweet if it was a new one and end the delay interval 
 function responseTweet(){
 	console.log("In responseTweet function");
-	T.post('statuses/update', { status: '@' + username + " thanks for tweeting us!" }, function(err, data, response) {
+	T.post('statuses/update', { status: '@' + username + " thanks for tweeting us! Go to https://t.co/RcAcQPafXz for help" }, function(err, data, response) {
   		//console.log(data)
   		console.log("Sent Tweet");
   		console.log(" ");
