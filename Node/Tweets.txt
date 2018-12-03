@@ -1,3 +1,3 @@
-cipher_graphics
-1069613326899060737
-@EZLearn2018 test test test
+username
+Tweet ID
+Tweet Message
