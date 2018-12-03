@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #0047ab;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    height: 1000px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #50c878;
+    height: 1000px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+ul {
+	list-style-type: none;
+    margin:0;
+    padding:0;
+    width:150px; 
+    background-color: #777;
+}
+li a {
+	display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+li a.active {
+	background-color: #4CAF50;
+    color: white;
+}
+li a:hover:not(.active) {
+	background-color: #555;
+    color: white;
+}
+#transbox5{
+    height:200px;
+    font-size:14pt;
+}
+.star-rating {
+    direction: rtl;
+    display: inline-block;
+    padding: 0px
+}
+
+.star-rating input[type=radio] {
+    display: none
+}
+
+.star-rating label {
+    color: #bbb;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type=radio]:checked ~ label {
+    color: #f2b600
+}
+
+</style>
+</head>
+
+<body>
+<header>
+  <h2>Submission</h2>
+
+
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <hr>
+      <li><a href="#">ABOUT</a></li>
+      <hr>
+      <li><a href="#">REQUEST COURSE</a></li>
+      <hr>
+      <li><a href="#">Take Quiz</a></li>
+      <hr>
+    </ul>
+  </nav>
+
+  <article>
+    <h1>Submit Resource</h1>
+    <p>
+          <p2>Subject:  Physics
+          </p2><br>
+      <br>
+      Tags: Visual, Lab, Interactive, Magnetic Feilds, Voltage, Strength
+      <br>
+      <br>
+          <p2>URL: <a href="https://phet.colorado.edu/en/simulation/charges-and-fields">https://phet.colorado.edu/en/simulation/charges-and-fields</a></p2><br>
+      <br>
+      <img src="https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields-600.png" width="400" height="200">
+      <br>
+
+      <p2>Rating:</p2>
+      <div class="star-rating">
+			<input id="star-5" type="radio" name="rating" value="star-5">
+			<label for="star-5" title="5 stars">
+					<i class="active fa fa-star" aria-hidden="true"></i>
+			</label>
+			<input id="star-4" type="radio" name="rating" value="star-4">
+			<label for="star-4" title="4 stars">
+					<i class="active fa fa-star" aria-hidden="true"></i>
+			</label>
+			<input id="star-3" type="radio" name="rating" value="star-3">
+			<label for="star-3" title="3 stars">
+					<i class="active fa fa-star" aria-hidden="true"></i>
+			</label>
+			<input id="star-2" type="radio" name="rating" value="star-2">
+			<label for="star-2" title="2 stars">
+					<i class="active fa fa-star" aria-hidden="true"></i>
+			</label>
+			<input id="star-1" type="radio" name="rating" value="star-1">
+			<label for="star-1" title="1 star">
+					<i class="active fa fa-star" aria-hidden="true"></i>
+			</label>
+		</div>
+    </p>
+    <br>
+    Reviews:
+    <br>
+    <br>
+    <u>Hunter123</u>
+    <br>
+    <br>
+    10/17/2018
+    <br>
+    <br>
+    Extremly helpful! You can change the magnetic feilds to demonstrate what you want.
+    <br>
+    Allows you to dynamicly change the data so that you can see how the interaction occur
+    <br>
+    between positive and negitive charges.
+
+  </article>
+ </selction>
+
+
+
+
+</body>
+</html>
