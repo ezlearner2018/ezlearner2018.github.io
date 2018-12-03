@@ -1,2 +1,2 @@
-# ezlearner2018.github.io
-Our website
+# EZLEARN 2018
+### Created by Andrew Wilson, Daniel Montoya, Hunter Danielson, and Mujtaba Usman
