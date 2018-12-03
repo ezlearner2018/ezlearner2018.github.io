@@ -28,3 +28,6 @@ Website Development:
 ## Author
 
 - Created by Andrew Wilson, Daniel Montoya, Hunter Danielson, and Mujtaba Usman
+
+## Links
+- [Twitter](https://twitter.com/EZLearn2018)
