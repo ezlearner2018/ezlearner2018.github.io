@@ -9,7 +9,7 @@
 
 ## Built With
 
-Bot Development: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Bot Icon")
+Bot Development: ![alt text](https://github.com/ezlearner2018/ezlearner2018.github.io/blob/master/bot%20icon.jpg "Bot Icon")
 - [Node.js](https://nodejs.org/en/)
 - [Sublime Text Editor](https://www.sublimetext.com/)
 
