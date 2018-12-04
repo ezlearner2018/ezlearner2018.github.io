@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Educational Resources | Request Course</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script src="SubmitingResource.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">FGCU</span> Education Resources</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="current"><a href="request.html">Request Course</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="quiz.html">Take Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--this is the main section of the code. Needs to be changed upon submission.-->
+    <!--Part 1-->
+    <div id="Part1">
+        <section id="main">
+            <div class="container">
+                <article id="main-col">
+                    <h1 class="page-title">Submit a Resource</h1>
+                </article>
+            </div>
+            <aside id="main">
+                <div class="container">
+                    <p>
+                        <div class="transbox4">
+
+                            Name of Resource:
+                            <br>
+                            <!--Drop Down menu-->
+                            <input type="text" id="Namenew" value=""/><br>
+                            <br>
+
+                            <p2>Subject:</p2><br><select id="Subjectnew">
+                                <!--first one is left blank to ensure that the program runs properly and if the user wants to cancel the drop down box.-->
+                                <option></option>
+                                <option value="Physics">Physics</option>
+                                <option value="Trig">Trig</option>
+                                <option value="Calculus">Calculus</option>
+                                <option value="Biology">Biology</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <br>
+
+                        <p2>Learning Styles:</p2><br><select id="LearningStylesnew">
+                            <!--first one is left blank to ensure that the program runs properly and if the user wants to cancel the drop down box.-->
+                            <option></option>
+                            <option value="Visual Learner">Visual Learner</option>
+                            <option value="Auditory Learner">Auditory Learner</option>
+                            <option value="Hands On Learner">Hands On Learner</option>
+                            <option value="Reading/Writting Learner">Reading/Writting Learner</option>
+                        </select>
+                        <br>
+                        <br>
+                        Tags:
+                        <br>
+                        <!--Drop Down menu-->
+                        <input type="text" id="Tagsnew"><br>
+                        <br>
+                        <div class="transbox4">
+                            <p2>URL:</p2><br>
+                            <input type="text" id="URLnew"><br>
+                        </div>
+                        <br>
+                        <div class="transbox5">
+                            <p2>Descriptions:</p2><br>
+                            <input type="text" id="Descriptionsnew"><br>
+                        </div>
+                        <br>
+                        <button class="button_1" type="submit">Submit</button>
+                    </p>
+                </div>
+
+    </div>
+    </div>
+    <!--Second Part-->
+    <div id="Part2">
+        <h2>
+            <center>
+                <b>
+                    Thank you for submitting a resource and helping out the community!
+                </b>
+                <br>
+                Click here to search for your or another resource!
+                <br>
+                <button class="button_3" type="submit">Search Here!</button>`
+            </center>
+        </h2>
+    </div>
+    <!--Third Part-->
+    <div id="Part3">
+        <section id="main">
+            <div class="container">
+                <article id="main-col">
+                    <h1 class="page-title">Request Course</h1>
+
+                </article>
+            </div>
+
+
+            <aside id="main">
+                <div class="container">
+                    <!--Drop Down menu-->
+                    <select id="Subject">
+                        <!--first one is left blank to ensure that the program runs properly and if the user wants to cancel the drop down box.-->
+                        <option></option>
+                        <option value="Physics">Physics</option>
+                        <option value="Trig">Trig</option>
+                        <option value="Calculus">Calculus</option>
+                        <option value="Biology">Biology</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Computer Science">Computer Science</option>
+                    </select>
+                    <!--Second feild is to specify learning Styles.-->
+                    <select id="LearningStyles">
+                        <!--first one is left blank to ensure that the program runs properly and if the user wants to cancel the drop down box.-->
+                        <option></option>
+                        <option value="Visual Learner">Visual Learner</option>
+                        <option value="Auditory Learner">Auditory Learner</option>
+                        <option value="Hands On Learner">Hands On Learner</option>
+                        <option value="Reading/Writting Learner">Reading/Writting Learner</option>
+                    </select>
+                    <!--Submit button, this is to submit the feilds-->
+                    <button class="button_4" type="submit">Search</button>
+                    <br>
+                    <div class="transbox">
+                        <p id="demo"></p>
+                    </div>
+                    <!--place holder code to understand and implement the css.-->
+                </div>
+            </aside>
+
+            <!--This sends the user to the submiting a resourse page that will store all that information localy-->
+            <h2>
+                <center>
+                    <b><u>Dont see a Resource that you like?</u></b>
+                    <br>Submit a Resource to our Database to help out the community!
+                    <br>
+                    <p2> <a href="submitaresource.html"><b>Click Here</b></a></p2>
+                    <br>
+                </center>
+            </h2>
+    </div>
+    </div>
+
+    <footer>
+        <p>Educational Resource, copyright &copyright 2018</p>
+    </footer>
+</body>
+
+</html>

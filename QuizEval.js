@@ -43,19 +43,19 @@ function gradeQuiz(){
         //puts the txt into the html
         console.log("A="+resultA,"K="+resultK,"V="+resultV,"VR="+resultVR);
         if(resultA>resultK &&resultA>resultV &&resultA>resultVR){
-            var txt="You are a A Learner!"
+            var txt="You are a Auditory Learner!"
             document.getElementById("demo").innerHTML=txt;
         }
         else if(resultV>resultK &&resultV>resultA &&resultV>resultVR){
-            var txt="You are a V Learner!";
+            var txt="You are a Visual Learner!";
             document.getElementById("demo").innerHTML=txt;
         }
         else if(resultK>resultA &&resultK>resultV &&resultK>resultVR){
-            var txt="You are a K Learner!";
+            var txt="You are a Hands On Learner!";
             document.getElementById("demo").innerHTML=txt;
         }
         else if(resultVR>resultA &&resultVR>resultV &&resultVR>resultK){
-            var txt="You are a VR Learner!";
+            var txt="You are a Reading and Writing Learner!";
             document.getElementById("demo").innerHTML=txt;
         }
     }
@@ -69,6 +69,6 @@ function gradeQuiz(){
       evalLearningStyle(resultA,resultK,resultV,resultVR);
     }
     else{
-      alert("Please check to see if all feilds are complete.");
+      alert("Please check to see if all fields are complete.");
     }
 }
