@@ -7,12 +7,8 @@ $(function () {
         <select id="Subject">
           <!--first one is left blank to ensure that the program runs properly and if the user wants to cancel the drop down box.-->
           <option></option>
-          <option value="Physics">Physics</option>
-          <option value="Trig">Trig</option>
+          <option value="Trigonometry">Trigonometry</option>
           <option value="Calculus">Calculus</option>
-          <option value="Biology">Biology</option>
-          <option value="Chemistry">Chemistry</option>
-          <option value="Computer Science">Computer Science</option>
         </select>
         <!--Second feild is to specify learning Styles.-->
         <select id="LearningStyles">
